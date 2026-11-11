@@ -8,24 +8,24 @@ look from the app’s own Figma). React 18 + TypeScript + Vite 6 + Tailwind 4 + 
 
 ```bash
 pnpm install
-pnpm dev        # http://localhost:5173/LovartAIv1rf/
+pnpm dev        # http://localhost:5173/
 pnpm build      # → dist/
 ```
 
 ## Deploy
 
 Push to `main` → GitHub Actions (`.github/workflows/deploy.yml`) builds and publishes to
-GitHub Pages: https://norin-web.github.io/LovartAIv1rf/. In the repo, Settings → Pages →
+GitHub Pages at https://lovarti.lat (custom domain, `public/CNAME`). In the repo, Settings → Pages →
 Source must be **GitHub Actions**. The workflow copies `index.html` to `404.html` so deep
 links load the app (they still answer HTTP 404, which only search engines notice).
 
 ### base / custom domain trap
 
-`vite.config.ts` has `base: "/LovartAIv1rf/"` because there is no domain yet.
-When a domain is attached in Pages settings, in **one commit**:
+`vite.config.ts` has `base: "/"` because the site runs on the domain lovarti.lat.
+If the domain is ever removed, in **one commit**:
 
-- set `base: "/"`;
-- add `public/CNAME` with the bare domain.
+- set `base: "/LovartAIv1rf/"`;
+- delete `public/CNAME`.
 
 Otherwise every asset 404s and the site is a white screen. Image paths always go
 through `img()` (`src/app/utils/img.ts`), so they follow `base` automatically.
