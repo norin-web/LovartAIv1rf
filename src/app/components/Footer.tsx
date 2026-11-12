@@ -57,9 +57,12 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="footer__copy">
-          <span>© {site.year} {site.operator || site.brand}</span>
-          <button onClick={() => scrollTo({ top: 0, behavior: "smooth" })}>Back to top ↑</button>
+        <div className="footer__bottom">
+          <p className="footer__note">{site.disclaimer}</p>
+          <div className="footer__copy">
+            <span>© {site.year} {site.operator}</span>
+            <button onClick={() => scrollTo({ top: 0, behavior: "smooth" })}>Back to top ↑</button>
+          </div>
         </div>
       </div>
     </footer>

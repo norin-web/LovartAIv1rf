@@ -12,7 +12,7 @@ export default function About() {
           <span className="label">About</span>
           <Split as="h1" className="h1" parts={[["Pictures should start with words, not settings"]]} />
           <Reveal as="p" className="lead hero__lead" delay={250}>
-            {site.operator ? `Lovart AI is an iPhone app by ${site.operator}.` : "Lovart AI is an iPhone app."} We wanted image generation to feel like sending a message: one sentence in, a finished picture out.
+            Lovart AI is an iPhone app by {site.operator}, an independent developer in the {site.operatorPlace}. We wanted image generation to feel like sending a message: one sentence in, a finished picture out.
           </Reveal>
         </div>
       </section>
@@ -41,7 +41,7 @@ export default function About() {
             ))}
           </div>
           <Reveal className="company">
-            {site.operator && <div><span className="small muted">Company</span><b>{site.operator}</b></div>}
+            <div><span className="small muted">Developer</span><b>{site.operator}</b></div>
             <div><span className="small muted">Write to us</span><a href={`mailto:${site.email}`}>{site.email}</a></div>
           </Reveal>
         </div>

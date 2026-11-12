@@ -33,9 +33,9 @@ through `img()` (`src/app/utils/img.ts`), so they follow `base` automatically.
 ## Where things live
 
 - `src/app/content/site.ts` — every fact: brand, email, App Store link, features, FAQ,
-  specs. Empty `operator` / `minIOS` hide their rows until the owner sends them.
+  specs, operator (Luka Prochazka) and the brand disclaimer. Empty `minIOS` hides its row.
 - `src/app/content/legal.ts` — Privacy Policy and Terms of Use, **verbatim** from the
-  owner (only `## ` headings and `- ` lists added). Empty → placeholder layout.
+  owner (only `## ` headings without numbers and `- ` lists added), effective 12 November 2026.
 - `src/styles/index.css` — tokens in `:root` (same as the Paper tokens) and all layout.
 - `public/images/` — WebP pictures; sources and the iPhone frame script are in `../File/`.
 

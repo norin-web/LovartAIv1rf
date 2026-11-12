@@ -1,14 +1,16 @@
 // Every brand / app fact lives here so names, IDs and emails are never duplicated.
 // Facts come from the app's Figma file (screens, onboarding, paywall, ASO).
-// PLACEHOLDER values are marked — replace them when the owner sends real data.
+// Operator and brand rights come from the Privacy Policy and Terms (12 November 2026).
 
 export const site = {
   brand: "Lovart AI",
   email: "luka@prochazka.best",
   year: new Date().getFullYear(),
-  // Company that ships the app — fill in from the owner's documents.
-  // While empty, the site shows the brand in ©, and hides the Developer row.
-  operator: "",
+  // Individual who ships the app (Privacy §1, Terms §1).
+  operator: "Luka Prochazka",
+  operatorPlace: "Netherlands",
+  // Brand rights (Terms §6): Resonate International INC licenses the name to the operator.
+  disclaimer: "LOVART and Lovart AI names, trademarks and logos belong to Resonate International INC and are used in the app under a brand authorization agreement.",
   tagline: "AI image generator for iPhone. Turn one sentence or one photo into a finished picture.",
 };
 
@@ -160,6 +162,7 @@ export const faq = [
   { q: "Which model should I pick?", a: "Flux is fast and good for concepts, Nano‑Banana is best for editing photos, GPT‑Image follows long prompts, Z‑Image gives the sharpest detail. Switch in the prompt bar or set a default in Settings." },
   { q: "How do I change a result?", a: "Open the result and type what to change in “Ask for a change” at the bottom. The new version appears in the same thread." },
   { q: "Where are my images saved?", a: "Every result is kept in Creations, grouped by date. Turn on Save to Photos in Settings to also save results to your photo library." },
+  { q: "Are my prompts and photos stored on a server?", a: "Your history of prompts, photos and results is kept on your iPhone, not on a Lovart AI server. When you create or edit an image, the prompt and any photo you attach are sent to the AI service (fal.ai) to make it. Details are in the Privacy Policy." },
   { q: "How do I delete images?", a: "In Creations, tap Select, choose the images and tap Delete." },
   { q: "How do I cancel my subscription?", a: "Subscriptions are billed through your Apple ID. Cancel in your iPhone’s Settings → your name → Subscriptions, at least 24 hours before renewal. Deleting the app doesn’t cancel an active subscription." },
   { q: "How do I restore a purchase on a new iPhone?", a: "Sign in with the same Apple ID, open Settings in the app and tap Restore purchases." },

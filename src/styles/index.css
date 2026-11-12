@@ -384,6 +384,8 @@ q { quotes: "“" "”"; }
 .footer__cols ul { display: flex; flex-direction: column; gap: 4px; }
 .footer__cols a { display: inline-block; padding: 4px 0; font-size: 15px; }
 .footer__cols a:hover { color: var(--muted); }
+.footer__bottom { display: flex; flex-direction: column; gap: 18px; }
+.footer__note { max-width: 720px; font-size: 13px; line-height: 19px; color: var(--faint); }
 .footer__copy { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 14px; color: var(--faint); }
 .footer__copy button { min-height: 44px; font-weight: 600; color: var(--ink); }
 @media (max-width: 767px) {
